@@ -1,20 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300');
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+/* may need to expand weights and styles of Cardo */
+/* override page sections display */
 
+html, body {
+    font-family: "Open Sans", "Verdana";
+    background-color: #fff !important
+}
+/* a:hover with box shadow none on green logo underline  */
 
-/*Uncomment the follwoing lines to move facets to the left*/
-
-/*
-prm-search > md-content.md-primoExplore-theme .main {
-    display: -webkit-flex; !* Safari *!
-    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
-    display: flex;
-    flex-flow: row-reverse wrap;
+/*#action_list, #tags,.services-index-under.hide-xs, #qrCodeScanner, #favorites-button, .pin-button {display: none}*/
+#action_list {
+    display:none;
+}
+#banner:hover, #banner a:hover {
+text-decoration:none;
+box-shadow:none;
 
 }
-.screen-gt-sm .sidebar{
-    webkit-flex: 0 0 15%;
-    flex: 0 0 15%;
+
+/* works, but a selector needed to target only one of the anchors. neither have ids */
+/*#banner a::before {
+    content:"Back to Catalog";
+}*/
+
+div > prm-services-page > prm-full-view-cont > md-content > div.display-none-print.flex-xl-20.flex-md-0.flex-lg-10.flex-0 {
+    display:none !important;
+    width: 0 !important;
+}
+.header, .topbar-wrapper, .layout-fill, .layout-column {
+    /*padding: 0 10%;*/
+}
+div.header,
+.top-nav-bar {
+    background-color: #fff !important;
+    padding: 1em;
+    /*padding:0.5% 1% 0.5% 1%;*/
+}
+.top-nav-bar {
+    padding: 0 1em;
 }
 
+.top-nav-bar, div > prm-services-page > prm-full-view-cont > div > prm-topbar > div.top-nav-bar, div.header div {
+     height:80px;
+     /*padding-top:0;*/
+}
+
+
+/* preview div structure */
+div.header div {
+    /*border: 1px solid #ccc;*/
+}
+#banner.product-logo {
+   /* padding:0;*/ /* reset test. this breaks the size of the image */
+   /*padding-top:0;*/
+}
+
+/* left nav element */
+#services-index {
+   /* border: 1px solid red;*/
+   display:none;
+}
+
+.__gt-xs .full-view-section-content {
+    padding-left:0;
+}
+
+/* removes extra padding around the record display after the header */
+.padded-container {
+    padding:0;
+}
+
+.top-nav-bar button, #signInBtn,.button-with-menu-arrow span {
+    color: #002878;
+    font-weight: 700;
+    font-weight: 700;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-top: 0; /* .625rem; */
+    padding-bottom: .7rem;
+    min-width: auto;
+    width: auto;
+}
+.top-nav-bar button:hover, #signInBtn:hover,.button-with-menu-arrow span:hover {
+     color: #336BE6;
+}
+button.sign-in-btn-ctm::after {
+    content: "|";
+    color: #E5E7EC;
+    height: 0.75rem;
+    /*width: 1px;
+    background-color: #E5E7EC;*/
+}
+
+prm-user-area-expandable .md-button.button-with-menu-arrow:not(.button-with-icon), .top-nav-bar button:nth-child(2) {
+    min-width: 0;
+   padding: 0 0 0 .3em;
+}
+
+.md-button.button-with-menu-arrow .menu-arrow:after {
+display: block;
+content: unset;
+position: relative;
+top:0px;
+}
+
+/*.full-view-inner-container {background-color: #fcfcfc; padding: 0}
+.__gt-xs, .full-view-section-content.full-view-section-content {padding-left:0}*/
+/* copy of base inner padding */
+
+
+a {
+    color: #5387f7;
+    font-weight: 700;
+}
+
+
+.full-view-inner-container, div.header.topbar-wrapper {
+    /*border: 1px solid #ccc;*/
+    background-color: #fff;
+}
+
+/* h3 link styles from BL search results */
+h3.item-title,
+h3.item-title a,
+h3.item-title a span span {
+    color: #336BE6;
+    font-family: "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Cantarell, Roboto, Oxygen-Sans, Ubuntu, "Helvetica Neue", sans-serif;
+    /*font-size: 1.5rem;*/
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* styled with font from h1/title on BL item detail */
+/* 
+h3.item-title span {
+color: #091C44;
+font-family:"Cardo", serif;
+}
+ */
+
+span.best-location-library-code, span.best-location-sub-location, span.best-location-delivery, .locations-link, .locations-link span {
+color: #336BE6;
+}
+
+h4.section-title {
+    font: normal normal 28px/1.5 "Cardo", serif;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #082B73;
+}
+
+h3.section-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    color: #605858;
+}
+h3.section-title span {
+text-transform:capitalize;
+    
+}
+button.button-as-link.button-external-link span {
+  color: #336BE6;
+padding-right: 0.3em;  
+}
+#tab-content-28 > div > div > prm-opac-back-button > button > span, .button-with-icon.md-button.md-ink-ripple, .button-with-icon.md-button.md-ink-ripple span {
+    text-transform: capitalize;
+    color: #336BE6;
+}
+
+.button-with-icon.md-button.md-ink-ripple:hover, .button-with-icon.md-button.md-ink-ripple span:hover, .back-button:hover, .md-button:hover {
+    background-color: #ccc !important;
+}
+.user-button.sign-in-btn-ctm.md-button:hover, .md-button.button-with-menu-arrow:hover {
+    background-color: #fff !important;
+    color: #336BE6;
+}
+.back-button:hover:not([disabled]) {
+    color: #fff;
+    background-color: #ccc !important;
+    }
+
+.bar.alert-bar {
+    background-color: #f6e4c1
+}
+.bar.alert-bar span {
+    color: #091c44;
+}
+/* hide all but the first two links. subject to change based on the "Links" content */
+/* 
+#links > div > prm-full-view-service-container > div.section-body > div > prm-service-links > div > div > div:nth-child(n+3) {
+    display:none;
+}
 */
+
+/* virtual browse */
+.md-virtual-repeat-offsetter ul li a {
+    font-weight:normal;
+}
+
+/* login modal */
+
+.md-dialog-container form.layout-full-width.ng-pristine.layout-column {
+    background-color: #004990;
+}
+
+/*.header.top-bar h1 {
+    margin-left:auto;
+    margin-right:auto;
+}
+.header.top-bar h1, .header > h1:nth-child(3) {
+    margin-left:auto;
+    margin-right:auto;
+}*/
+
+
 
 
